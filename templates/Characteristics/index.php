@@ -1,9 +1,3 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Characteristic[]|\Cake\Collection\CollectionInterface $characteristics
- */
-?>
 <div class="characteristics index content">
     <?= $this->Html->link(__('New Characteristic'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Characteristics') ?></h3>

@@ -1,9 +1,3 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Characteristic $characteristic
- */
-?>
 <div class="row">
     <aside class="column">
         <div class="side-nav">

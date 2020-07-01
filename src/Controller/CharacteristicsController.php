@@ -3,19 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-/**
- * Characteristics Controller
- *
- * @property \App\Model\Table\CharacteristicsTable $Characteristics
- * @method \App\Model\Entity\Characteristic[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
- */
 class CharacteristicsController extends AppController
 {
-    /**
-     * Index method
-     *
-     * @return \Cake\Http\Response|null|void Renders view
-     */
     public function index()
     {
         $characteristics = $this->paginate($this->Characteristics);
@@ -23,13 +12,6 @@ class CharacteristicsController extends AppController
         $this->set(compact('characteristics'));
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id Characteristic id.
-     * @return \Cake\Http\Response|null|void Renders view
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
     public function view($id = null)
     {
         $characteristic = $this->Characteristics->get($id, [
@@ -39,11 +21,6 @@ class CharacteristicsController extends AppController
         $this->set(compact('characteristic'));
     }
 
-    /**
-     * Add method
-     *
-     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     */
     public function add()
     {
         $characteristic = $this->Characteristics->newEmptyEntity();
@@ -60,13 +37,6 @@ class CharacteristicsController extends AppController
         $this->set(compact('characteristic', 'users'));
     }
 
-    /**
-     * Edit method
-     *
-     * @param string|null $id Characteristic id.
-     * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
     public function edit($id = null)
     {
         $characteristic = $this->Characteristics->get($id, [
@@ -85,13 +55,6 @@ class CharacteristicsController extends AppController
         $this->set(compact('characteristic', 'users'));
     }
 
-    /**
-     * Delete method
-     *
-     * @param string|null $id Characteristic id.
-     * @return \Cake\Http\Response|null|void Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
